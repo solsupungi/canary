@@ -14,12 +14,13 @@ spec:
         app: rollout-canary
     spec:
       containers:
-      - image: httpd
+      - image: nginx
         name: rollout-canary
         ports:
         - containerPort: 80
   strategy:
     canary:
+      dynamicStableScale: true
       canaryService: canary-svc
       stableService: stable-svc
       trafficRouting:
