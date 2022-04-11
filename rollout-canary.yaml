@@ -14,7 +14,7 @@ spec:
         app: rollout-canary
     spec:
       containers:
-      - image: httpd
+      - image: nginx
         name: rollout-canary
         ports:
         - containerPort: 80
